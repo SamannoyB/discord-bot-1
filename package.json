@@ -1,0 +1,19 @@
+{
+  "name": "helperjs",
+  "version": "1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@justalk/pornhub-api": "^3.5.0",
+    "akaneko": "^5.2.3",
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
