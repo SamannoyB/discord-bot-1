@@ -12,8 +12,11 @@
   "dependencies": {
     "@justalk/pornhub-api": "^3.5.0",
     "akaneko": "^5.2.3",
+    "anime-images-api": "^2.0.0",
+    "axios": "^0.27.2",
     "discord.js": "^13.8.1",
     "dotenv": "^16.0.1",
+    "events": "^3.3.0",
     "nodemon": "^2.0.19"
   }
 }
