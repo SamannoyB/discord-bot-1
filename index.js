@@ -6,6 +6,8 @@ require('dotenv').config();
 const fetch = require('node-fetch');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const akaneko = require('akaneko');
+const { EventEmitter } = require('stream');
+require('events').EventEmitter.defaultMaxListeners = 30;
 
 client.on('ready', () => {
     console.log(`${client.user.tag}`);
@@ -38,8 +40,62 @@ client.on('ready', () => {
     });client.guilds.cache.get("1001692509296144445").commands.create({
         name: 'pussy',
         description: 'random pussy image'
+    });client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'catgirl',
+        description: 'random catgirl image'
     });
-     
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'foxgirl',
+        description: 'random foxgirl image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'blowjob',
+        description: 'random blowjob image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'femdom',
+        description: 'random femdom image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'glasses',
+        description: 'random glasses image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'maid',
+        description: 'random maid image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'orgy',
+        description: 'random orgy image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'school',
+        description: 'random school image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'succubus',
+        description: 'random succubus image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'tentacles',
+        description: 'random tentacles image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'thighs',
+        description: 'random thighs image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'uniform',
+        description: 'random uniform image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'yuri',
+        description: 'random yuri image'
+    });
+    client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'zettairyouiki',
+        description: 'random zettaiRyouiki image'
+    });
 });
 
 client.on('interactionCreate', async interaction => {
@@ -73,7 +129,8 @@ client.on('interactionCreate', async interaction => {
         const url = await akaneko.nsfw.feet();
         interaction.reply(url);
     }
-})client.on('interactionCreate', async interaction => {
+})
+client.on('interactionCreate', async interaction => {
     if (interaction.commandName === "gifs") {
         const url = await akaneko.nsfw.gifs();
         interaction.reply(url);
@@ -90,13 +147,103 @@ client.on('interactionCreate', async interaction => {
         const url = await akaneko.nsfw.panties();
         interaction.reply(url);
     }
-})client.on('interactionCreate', async interaction => {
+})
+client.on('interactionCreate', async interaction => {
     if (interaction.commandName === "pussy") {
         const url = await akaneko.nsfw.pussy();
         interaction.reply(url);
     }
 })
-
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "catgirl") {
+        const url = await akaneko.neko();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "foxgirl") {
+        const url = await akaneko.foxgirl();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "blowjob") {
+        const url = await akaneko.nsfw.blowjob();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "thighs") {
+        const url = await akaneko.nsfw.thighs();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "femdom") {
+        const url = await akaneko.nsfw.femdom();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "glasses") {
+        const url = await akaneko.nsfw.glasses();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "maid") {
+        const url = await akaneko.nsfw.maid();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "orgy") {
+        const url = await akaneko.nsfw.orgy();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "school") {
+        const url = await akaneko.nsfw.school();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "succubus") {
+        const url = await akaneko.nsfw.succubus();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "tentacles") {
+        const url = await akaneko.nsfw.tentacles();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "uglyBastard") {
+        const url = await akaneko.nsfw.uglyBastard();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "uniform") {
+        const url = await akaneko.nsfw.uniform();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "yuri") {
+        const url = await akaneko.nsfw.yuri();
+        interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "zettaiRyouiki") {
+        const url = await akaneko.nsfw.zettaiRyouiki();
+        interaction.reply(url);
+    }
+})
 
 
 
