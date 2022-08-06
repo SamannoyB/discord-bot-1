@@ -8,6 +8,8 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const akaneko = require('akaneko');
 const { EventEmitter } = require('stream');
 require('events').EventEmitter.defaultMaxListeners = 30;
+const API = require('anime-images-api')
+const images_api = new API() 
 
 client.on('ready', () => {
     console.log(`${client.user.tag}`);
@@ -92,9 +94,9 @@ client.on('ready', () => {
         name: 'yuri',
         description: 'random yuri image'
     });
-    client.guilds.cache.get("1001692509296144445").commands.create({
-        name: 'zettairyouiki',
-        description: 'random zettaiRyouiki image'
+     client.guilds.cache.get("1001692509296144445").commands.create({
+        name: 'boobsgif',
+        description: 'random boobs gif'
     });
 });
 
@@ -242,6 +244,13 @@ client.on('interactionCreate', async interaction => {
     if (interaction.commandName === "zettaiRyouiki") {
         const url = await akaneko.nsfw.zettaiRyouiki();
         interaction.reply(url);
+    }
+})
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === "boobsgif") {
+       images_api.sfw.hug().then(response => {
+            interaction.reply(response.image)
+        }) 
     }
 })
 
