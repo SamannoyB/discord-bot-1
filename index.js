@@ -275,7 +275,7 @@ client.on('interactionCreate', async interaction => {
     client.users.fetch(user).then(
         (user) => {
             try {
-                user.send(photolink)
+                user.send(`${interaction.id} has sent you a nude: ${photolink}`);
             }
             catch(err) {
                 console.log(err);
